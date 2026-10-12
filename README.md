@@ -1,3 +1,7 @@
 # Software_Systems_Final
 Final Project - Software Systems Website
-Change later
+
+### Day One: 
+- Added Western Logo
+- Added Initial CSS
+- Added Initial HTML
