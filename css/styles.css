@@ -1,7 +1,1 @@
-        /* Ensure the line spans the full width */
-        hr {
-            width: 100%;
-            border: none;           /* Remove default border */
-            border-top: 2px solid black; /* Custom thickness and color */
-            margin: 0;              /* Remove extra spacing */
-        }
+
