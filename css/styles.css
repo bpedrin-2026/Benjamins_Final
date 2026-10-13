@@ -1,84 +1,137 @@
-hr {
-    width: 100%;
-    border: none;
-    border-top: 3px solid #000;
-    margin: 0;
+        
+/* Styling for the horizontal rule */  
+        hr {
+            width: 100%;
+            border: none;
+            border-top: 3px solid #000;
+            margin: 0;
+        }
+
+/* Styling for main headings */
+        h1 {
+            font-family: 'Times New Roman', serif;
+            color: #161616;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+/* Styling for centered paragraphs */
+        p.centered {
+            text-align: center;
+            font-size: 1.2em;
+            color: #181717;
+            margin: 10px 0;
+        }
+
+/* Sizing and styling the logo image */
+        img.logo {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 5%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+/* Flexbox for the logo banner */
+        .logo-banner {
+            display: flex;
+            align-items: center;
+            font-size: clamp(1.5rem, 2vw, 2.5rem);
+            gap: 16px;
+        }
+
+/* Style for the Logo image */
+        .logo-banner img {
+            width: 100px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+/* Flexbox for the logo and text */
+        .logo-banner p {
+            flex: 1;
+            margin: 0;
+            font-size: 1.2em;
+            text-align: center;
+            margin: 0;
 }
 
-h1 {
-    font-family: 'Times New Roman', serif;
-    color: #161616;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
-
-p.centered {
-    text-align: center;
-    font-size: 1.2em;
-    color: #181717;
-    margin: 10px 0;
-}
-
-
-img.logo {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 5%;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.logo-banner {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-}
-
-.logo-banner img {
-  width: 100px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.logo-banner p {
-    flex: 1;
-    margin: 0;
-    font-size: 1.5em;
-    text-align: center;
-    margin: 0;
-}
-
-
-/* Flex container styles */
+/* Flex container for Flex items */
         .flex-container {
-            display: flex;              /* Enable flexbox */
-            flex-direction: row;        /* Arrange items horizontally */
-            justify-content: space-around; /* Space items evenly */
-            align-items: center;        /* Align items vertically */
+            display: flex;            
+            flex-direction: row;       
+            justify-content: space-around; 
+            align-items: center;    
             background-color: #f0f0f0;
             padding: 20px;
             border: 2px solid #ccc;
         }
 
-/* Flex items styles */
+/* Flex boxes for other pages */
         .flex-item {
-            background-color: #4CAF50;
-            color: white;
+            background-color: #9e061a;
+            color: rgb(255, 255, 255);
             padding: 20px;
             margin: 10px;
-            flex: 1;                    /* Grow equally */
+            flex: 1 1 0;      
             text-align: center;
             border-radius: 5px;
         }
 
-/* Responsive example: stack items vertically on small screens */
+/* Adjust for smaller screens */
         @media (max-width: 600px) {
             .flex-container {
                 flex-direction: column;
             }
         }
 
+/* Changes the underline color of links */
+        a {
+            text-decoration: underline;
+            /* text-decoration: none; */                /* Uncomment this line to remove the underline */
+            text-decoration-color: white;
+        }
 
+/* For the Presentation iframe */
+        .slides {
+            display: block;
+            width: 75%;                                 /* Sets the width of the iframe to 75% of the viewport */
+            max-width: 750px;                           /* Ensures the iframe doesn't exceed 750px in width */
+            aspect-ratio: 16 / 9;
+            border: 0;
+            margin: 0 auto 0 0;  
+        }
+
+/* Separate styling for the footer - aligns the buttons and links accordingly*/
+        footer {
+            text-align: center;                         /* In this case, it centers the content */
+            margin-top: 50px;
+        }
+
+/* Styling for the return button */
+        .return-btn {
+            background-color: #7c0b0b;
+            color: white;            
+            padding: 10px 20px;     
+            border: none;         
+            border-radius: 5px;                         /* Rounded corners for the button */
+            cursor: pointer;                            /* Changes the cursor to a hand when hovering over the button */
+            font-size: 1em;
+        }
+
+        .return-btn:hover {
+            background-color: #ec7983;
+        }
+
+
+/* Styling for the main content area */
+        .about-me {
+            padding: 20px;
+            font-size: 2em;
+            text-align: center;
+            border-radius: 10px;
+            margin-top: 50px;                           /* Needed a little more space between the top of the page and the main content area */
+        }
 
