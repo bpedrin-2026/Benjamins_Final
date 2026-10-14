@@ -170,17 +170,17 @@
 
         .pdf-button {
             display: block;
-            margin-left: auto;                                                          /* keeps it on the right */
-            margin-right: 100px;
-            margin-bottom: 50px;
-            width: 200px;                                                               /* set to match your image's proportions */
-            height: 100px;
-            background-image: url('../images/Western_Cavaliers.jpg');                   /* put my image on the button */
-            background-size: contain;                                                   /* scales the image to fit inside the button */
+            margin: 0 auto;                                                              /* centers the button */
+            width: 200px;
+            height: 150px;
+            background-image: url('../images/pandora.jpg');                   /* puts my image on the button */
+            background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
-            background-color: transparent;
-            border: none;
+            background-color: #7c0b0b;
+            border: 1px solid #000;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             cursor: pointer;
 
         }
