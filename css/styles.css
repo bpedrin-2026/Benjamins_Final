@@ -1,5 +1,32 @@
         
-/* Styling for the horizontal rule */  
+/* --------------------------  Set the height of each section acording to the viewport height -------------------------- */
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            position: relative;             /* Keeps the header in place */
+            z-index: 1;                     /* Moves the header to the front */
+            background-color: white;      /* Gives the header an actual background color */
+            flex: none;                     /* Sets the header to take up the space it needs and will not grow or shrink */
+            overflow-y: auto;               /* Allows scrolling instead of bleeding*/
+         }
+
+        main   {
+            flex: 1 1 0;                    /* Allows main to grow & shrink as needed */
+            min-height: 0;
+            overflow-y: auto;  
+        } 
+
+        footer { flex: 0 0  15vh;           /* Sets the footer to take up 15% of the viewport height */
+            overflow-y: auto;  
+        }
+
+
+/* -------------------------------------------  Styling for the horizontal rule  --------------------------------------- */  
         hr {
             width: 100%;
             border: none;
@@ -7,7 +34,7 @@
             margin: 0;
         }
 
-/* Styling for main headings */
+/* --------------------------------------------  Styling for main headings --------------------------------------------- */
         h1 {
             font-family: 'Times New Roman', serif;
             color: #161616;
@@ -19,10 +46,12 @@
 /* Styling for centered paragraphs */
         p.centered {
             text-align: center;
-            font-size: 1.2em;
+            font-size: 2em;
             color: #181717;
             margin: 10px 0;
         }
+
+/*  ----------------------------------------------  Flexbox for the logo banner  ---------------------------------------  */
 
 /* Sizing and styling the logo image */
         img.logo {
@@ -58,7 +87,8 @@
             margin: 0;
 }
 
-/* Flex container for Flex items */
+/* ------------------------------------------  Flexbox for the main page links  ---------------------------------------   */
+
         .flex-container {
             display: flex;            
             flex-direction: row;       
@@ -69,7 +99,7 @@
             border: 2px solid #ccc;
         }
 
-/* Flex boxes for other pages */
+
         .flex-item {
             background-color: #9e061a;
             color: rgb(255, 255, 255);
@@ -79,22 +109,25 @@
             text-align: center;
             border-radius: 5px;
         }
+        .flex-item:hover {
+            background-color: #cf747c;
+        }
 
-/* Adjust for smaller screens */
+/* -------------------------------------------  Adjust for smaller screens  ----------------------------------------------- */
         @media (max-width: 600px) {
             .flex-container {
                 flex-direction: column;
             }
         }
 
-/* Changes the underline color of links */
+/* --------------------------------------------  Changes the underline color of links  ------------------------------------- */
         a {
             text-decoration: underline;
             /* text-decoration: none; */                /* Uncomment this line to remove the underline */
             text-decoration-color: white;
         }
 
-/* For the Presentation iframe */
+/* --------------------------------------------  For the Presentation iframe  ----------------------------------------------- */
         .slides {
             display: block;
             width: 75%;                                 /* Sets the width of the iframe to 75% of the viewport */
@@ -130,7 +163,7 @@
         .about-me {
             padding: 20px;
             font-size: 2em;
-            text-align: center;
+            text-align: justify;
             border-radius: 10px;
             margin-top: 50px;                           /* Needed a little more space between the top of the page and the main content area */
         }
