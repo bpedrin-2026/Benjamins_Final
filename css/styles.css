@@ -140,7 +140,7 @@
 /* Separate styling for the footer - aligns the buttons and links accordingly*/
         footer {
             text-align: center;                         /* In this case, it centers the content */
-            margin-top: 50px;
+            margin-top: 25px;
         }
 
 /* Styling for the return button */
@@ -168,3 +168,19 @@
             margin-top: 50px;                           /* Needed a little more space between the top of the page and the main content area */
         }
 
+        .pdf-button {
+            display: block;
+            margin-left: auto;                                                          /* keeps it on the right */
+            margin-right: 100px;
+            margin-bottom: 50px;
+            width: 200px;                                                               /* set to match your image's proportions */
+            height: 100px;
+            background-image: url('../images/Western_Cavaliers.jpg');                   /* put my image on the button */
+            background-size: contain;                                                   /* scales the image to fit inside the button */
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+
+        }
