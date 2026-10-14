@@ -1,222 +1,248 @@
-        /* --------------------------  Set the height of each section acording to the viewport height -------------------------- */
+body {
+    margin: 0;
+    min-height: 150vh;
+    display: flex;
+    flex-direction: column;
+}
 
-        body {
-            margin: 0;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
+header {
+    position: relative;       /* Keeps the header in place */
+    z-index: 1;               /* Moves the header to the front */
+    background-color: white;
+    flex: none;               /* Header takes the space it needs; never grows or shrinks */
+    overflow-y: auto;         /* Scroll instead of bleeding */
+}
 
-        header {
-            position: relative;
-            /* Keeps the header in place */
-            z-index: 1;
-            /* Moves the header to the front */
-            background-color: white;
-            /* Gives the header an actual background color */
-            flex: none;
-            /* Sets the header to take up the space it needs and will not grow or shrink */
-            overflow-y: auto;
-            /* Allows scrolling instead of bleeding*/
-        }
+main {
+    flex: 1 1 0;              /* Grows and shrinks as needed */
+    min-height: 0;
+    overflow-y: auto;
+}
 
-        main {
-            flex: 1 1 0;
-            /* Allows main to grow & shrink as needed */
-            min-height: 0;
-            overflow-y: auto;
-        }
+footer {
+    flex: 0 0 15vh;           /* Footer takes 15% of the viewport height */
+    overflow-y: auto;
+    text-align: center;
+    margin-top: 25px;
+}
 
-        footer {
-            flex: 0 0 15vh;
-            /* Sets the footer to take up 15% of the viewport height */
-            overflow-y: auto;
-        }
+/* ---------- Horizontal rule ---------- */
+
+hr {
+    width: 100%;
+    border: none;
+    border-top: 3px solid #000;
+    margin: 0;
+}
+
+/* ---------- Main headings ---------- */
+
+h1 {
+    font-family: 'Times New Roman', serif;
+    color: #161616;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* ---------- Centered paragraphs ---------- */
+
+p.centered {
+    text-align: center;
+    font-size: 2em;
+    color: #181717;
+    margin: 10px 0;
+}
+
+/* ---------- Logo banner ---------- */
+
+.logo-banner {
+    display: flex;
+    align-items: center;
+    font-size: clamp(1.5rem, 2vw, 2.5rem);
+    gap: 16px;
+}
+
+.logo-banner img {
+    width: 100px;
+    border-radius: 10px;
+    margin-left: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo-banner p {
+    flex: 1;
+    margin: 0;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+/* ---------- Main page links ---------- */
+
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border: 2px solid #ccc;
+}
+
+.flex-item {
+    background-color: #9e061a;
+    color: #fff;
+    padding: 20px;
+    margin: 10px;
+    flex: 1 1 0;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.flex-item:hover {
+    background-color: #cf747c;
+}
+
+/* ---------- Smaller screens ---------- */
+
+@media (max-width: 600px) {
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .flex-item {
+        flex: 0 0 80px;
+    }
+}
+
+/* ---------- Link underline color ---------- */
+
+a {
+    text-decoration-color: white;
+}
+
+/* ---------- Presentation iframe ---------- */
+
+.slides {
+    display: block;
+    width: 75%;
+    max-width: 750px;
+    aspect-ratio: 16 / 9;
+    border: 0;
+    margin: 0 auto 0 0;
+}
+
+/* ---------- Return button ---------- */
+
+.return-btn {
+    background-color: #7c0b0b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.return-btn:hover {
+    background-color: #ec7983;
+}
+
+/* ---------- About Me section ---------- */
+
+.about-me-header {
+    margin: 0;
+    max-height: 25vh;
+}
+
+.about-me-title {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.about-me {
+    padding: 20px;
+    font-size: 1.2em;
+    text-align: justify;
+    border-radius: 10px;
+    margin-top: 25px;
+}
+
+.about-me-container {
+    width: 100%;
+    margin: 0 auto;
+    background-color: rgb(104, 106, 107);
+}
+
+.about-me-image {
+    display: block;
+    margin: 0 auto;
+    max-width: 15%;
+    height: auto;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* ---------- PDF button ---------- */
+
+.pdf-button {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 150px;
+    background: url('../images/pandora.jpg') center / contain no-repeat;
+    border: 1px solid #000;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
 
 
-        /* -------------------------------------------  Styling for the horizontal rule  --------------------------------------- */
 
-        hr {
-            width: 100%;
-            border: none;
-            border-top: 3px solid #000;
-            margin: 0;
-        }
+/* ---------- Trial section ---------- */
 
-        /* --------------------------------------------  Styling for main headings --------------------------------------------- */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
 
-        h1 {
-            font-family: 'Times New Roman', serif;
-            color: #161616;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
+.dropbtn {
+    background-color: #7c0b0b;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
 
-        /* ---------------------------------------------  Styling for centered paragraphs -------------------------------------- */
+.dropbtn:hover {
+    background-color: #ec7983;
+}
 
-        p.centered {
-            text-align: center;
-            font-size: 2em;
-            color: #181717;
-            margin: 10px 0;
-        }
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
 
-        /*  ----------------------------------------------  Styling for the logo img  ---------------------------------------  */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
 
-        /* ============================================
-       img.logo {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 10%;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        /* ============================================
-        
-        /*  ----------------------------------------------  Flexbox for the logo banner  ---------------------------------------  */
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
 
-        .logo-banner {
-            display: flex;
-            align-items: center;
-            font-size: clamp(1.5rem, 2vw, 2.5rem);
-            gap: 16px;
-        }
-
-        /* -----------------------------------------------  Style for the Logo image -------------------------------------------- */
-
-        .logo-banner img {
-            width: 100px;
-            border-radius: 10px;
-            margin-left: 25px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        /* -----------------------------------------------  Flexbox for the logo and text --------------------------------------- */
-
-        .logo-banner p {
-            flex: 1;
-            margin: 0;
-            font-size: 1.2em;
-            text-align: center;
-            margin: 0;
-        }
-
-        /* ------------------------------------------  Flexbox for the main page links  ---------------------------------------   */
-
-        .flex-container {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            align-items: stretch;
-            background-color: #f0f0f0;
-            padding: 20px;
-            border: 2px solid #ccc;
-        }
-
-
-        .flex-item {
-            background-color: #9e061a;
-            color: rgb(255, 255, 255);
-            padding: 20px;
-            margin: 10px;
-            flex: 1 1 0;
-            min-width: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            border-radius: 5px;
-        }
-
-        .flex-item:hover {
-            background-color: #cf747c;
-        }
-
-        /* -------------------------------------------  Adjust for smaller screens  ----------------------------------------------- */
-        @media (max-width: 600px) {
-            .flex-container {
-                flex-direction: column;
-            }
-
-            .flex-item {
-                flex: 0 0 80px;
-            }
-        }
-
-        /* --------------------------------------------  Changes the underline color of links  ------------------------------------- */
-        a {
-            text-decoration: underline;
-            /* text-decoration: none; */
-            /* Uncomment this line to remove the underline */
-            text-decoration-color: white;
-        }
-
-        /* --------------------------------------------  For the Presentation iframe  ----------------------------------------------- */
-        .slides {
-            display: block;
-            width: 75%;
-            /* Sets the width of the iframe to 75% of the viewport */
-            max-width: 750px;
-            /* Ensures the iframe doesn't exceed 750px in width */
-            aspect-ratio: 16 / 9;
-            border: 0;
-            margin: 0 auto 0 0;
-        }
-
-        /* ------------------- Separate styling for the footer - aligns the buttons and links accordingly ------------------------- */
-        footer {
-            text-align: center;
-            /* In this case, it centers the content */
-            margin-top: 25px;
-        }
-
-        /* -------------------------------------------  Styling for the return button  ------------------------------------------- */
-        .return-btn {
-            background-color: #7c0b0b;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            /* Rounded corners for the button */
-            cursor: pointer;
-            /* Changes the cursor to a hand when hovering over the button */
-            font-size: 1em;
-        }
-
-        .return-btn:hover {
-            background-color: #ec7983;
-        }
-
-
-        /* ----------------------------------------------  Styling for the main content area  ---------------------------------- */
-        .about-me {
-            padding: 20px;
-            font-size: 2em;
-            text-align: justify;
-            border-radius: 10px;
-            margin-top: 50px;
-            /* Needed a little more space between the top of the page and the main content area */
-        }
-
-        /* ----------------------------------------------  Styling for the PDF button  ----------------------------------------- */
-
-        .pdf-button {
-            display: block;
-            margin: 0 auto;
-            /* centers the button */
-            width: 200px;
-            height: 150px;
-            background-image: url('../images/pandora.jpg');
-            /* puts my image on the button */
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-            background-color: none;
-            border: 1px solid #000;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            cursor: pointer;
-
-        }
+.dropdown:hover .dropdown-content {
+    display: block;
+}
