@@ -31,7 +31,7 @@ footer {
 hr {
     width: 100%;
     border: none;
-    border-top: 3px solid #000;
+    border-top: 2px solid #000;
     margin: 0;
 }
 
@@ -51,7 +51,7 @@ p.centered {
     text-align: center;
     font-size: 2em;
     color: #181717;
-    margin: 10px 0;
+    margin: 20px 100px;
 }
 
 /* ---------- Logo banner ---------- */
@@ -127,8 +127,8 @@ a {
 
 .slides {
     display: block;
-    width: 75%;
-    max-width: 750px;
+    width: 75%;             /* % of the viewport width */
+    max-width: 750px;       /* Cap the width at 750px */
     aspect-ratio: 16 / 9;
     border: 0;
     margin: 0 auto 0 0;
@@ -142,7 +142,7 @@ a {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
+    cursor: pointer;        /* Change cursor to hand on hover */
     font-size: 1em;
 }
 
@@ -202,7 +202,7 @@ a {
 
 
 
-/* ---------- Trial section ---------- */
+/* ---------- Trial section for dropdown menu ----------
 
 .dropdown {
     position: relative;
@@ -246,3 +246,5 @@ a {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+---------------------------------- End of Trial Section --------------------- */
+
