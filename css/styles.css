@@ -45,7 +45,7 @@ hr {
 
 /* ---------- Main headings ---------- */
 
-h1 {
+.site-h1 {
     font-family: 'Times New Roman', serif;
     color: #161616;
     text-align: center;
@@ -230,20 +230,21 @@ a {
     /* how the card shares space in the outer row */
     min-width: 0;
     gap: 0.5rem;
+}
 
-    .columns img {
-        display: block;
-        width: 100%;
-        /* fills the card's width */
-        height: auto;
-    }
+.columns img {
+    display: block;
+    width: 300px;
+    border: 2px solid red;
+    height: auto;
+}
 
-    .columns p {
-        margin: 0;
-        flex: 1;
-    }
+.columns p {
+    margin: 0;
+    flex: 1;
+}
 
-    /* ---------- Trial section for dropdown menu ----------
+/* ---------- Trial section for dropdown menu ----------
 
 .dropdown {
     position: relative;
