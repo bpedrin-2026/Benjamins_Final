@@ -91,6 +91,13 @@ p.centered {
     text-align: center;
 }
 
+.personal-img {
+    width: 25%;
+    border-radius: 10px;
+    margin-right: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 /* ---------- Main page links ---------- */
 
 .flex-container-wrap {
@@ -149,12 +156,10 @@ a {
 .slides {
     display: block;
     width: 75%;
-    /* % of the viewport width */
     max-width: 750px;
-    /* Cap the width at 750px */
     aspect-ratio: 16 / 9;
     border: 0;
-    margin: 0 auto 0 0;
+    margin: 0 auto;
 }
 
 /* ---------- Return button ---------- */
@@ -236,24 +241,37 @@ a {
 .column-1 {
     display: flex;
     flex-direction: column;
-    flex: 0 1 30%;
+    flex: 0 1 35%;
     min-width: 0;
     text-align: justify;
     font-size: 1.2em;
-    gap: 0.5rem;
+    gap: 1rem;
 }
 
 .column-2 {
     display: flex;
     flex-direction: column;
-    flex: 1 1 0;
+    flex: 0 1 25%;
     min-width: 0;
     text-align: justify;
     font-size: 1.2em;
-    gap: 0.5rem;
+    gap: 1rem;
 }
 
-.columns img {
+.shaded-box {
+    background-color: #91db54;
+    padding: 5px 25px;
+}
+.column-3 {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 50%;
+    text-align: justify;
+    font-size: 1.2em;
+    gap: 1em;
+}
+
+.column-3 img {
     display: block;
     width: 300px;
     border: 2px solid black;
