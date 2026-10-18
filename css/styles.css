@@ -31,6 +31,20 @@
     overflow-y: auto;
 }
 
+.main-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.index1-images {
+    width: 15%;
+    aspect-ratio: 16/9;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 .site-footer {
     flex: 0 0 15vh;
     /* Footer takes 15% of the viewport height */
@@ -192,18 +206,22 @@ a {
     margin-bottom: 10px;
 }
 
-.about-me {
-    padding: 20px;
-    font-size: 1.2em;
-    text-align: justify;
-    border-radius: 10px;
-    margin-top: 25px;
-}
-
 .about-me-container {
     width: 100%;
     margin: 0 auto;
-    background-color: rgb(104, 106, 107);
+    background-color: rgb(90, 166, 204);
+}
+
+.about-me {
+    display: flex;
+    flex: 1 0 50%;
+    flex-direction: row;
+    padding: 20px;
+    font-size: 1.5em;
+    text-align: justify;
+    border-radius: 10px;
+    margin: 25px;
+    gap: 10px;
 }
 
 .about-me-image {
