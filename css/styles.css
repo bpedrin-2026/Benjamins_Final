@@ -26,7 +26,7 @@
 
 .site-main {
     flex: 1 1 0;
-    /* Grows and shrinks as needed */
+    align-items: center;
     min-height: 0;
     overflow-y: auto;
 }
@@ -89,6 +89,14 @@ p.centered {
     color: white;
     font-size: clamp(1.5rem, 1vw, 2rem);
     gap: 16px;
+}
+
+.guardian-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-size: clamp(1.5rem, 1vw, 2rem);
 }
 
 .logo-banner img {
@@ -214,15 +222,20 @@ a {
 
 .about-me {
     display: flex;
-    flex: 1 0 50%;
     flex-direction: row;
     padding: 20px;
     font-size: 1.5em;
     text-align: justify;
     border-radius: 10px;
     margin: 25px;
-    gap: 10px;
+    gap: 40px;
 }
+
+.about-me-item {
+    flex: 1 0 50%;
+    align-self: flex-end;
+}
+
 
 .about-me-image {
     display: block;
@@ -301,6 +314,7 @@ a {
     text-align: justify;
     flex: 1;
 }
+
 
 /* ---------- Trial section for dropdown menu ----------
 

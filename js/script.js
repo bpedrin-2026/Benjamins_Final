@@ -3,11 +3,15 @@
 //              JavaScript for the PDF button
 // -------------------------------------------------------
 
+
 function openPdf() {
   window.open('../docs/PandoraSpeech.pdf', '_blank');
 }
 
-document.getElementById('pdfButton').addEventListener('click', function () {
+const pdfButton = document.getElementById('pdfButton');
+
+if (pdfButton) {
+  pdfButton.addEventListener('click', function () {
                                                               // First popup: ask if they want to continue
   const wantsToContinue = confirm(
     'This will open the PDF in a new window. \nDo you want to continue?'
@@ -20,15 +24,19 @@ document.getElementById('pdfButton').addEventListener('click', function () {
 
                                                               // Second popup: they said no, so double-check
   const sureToCancel = confirm(
-    "Are you sure you don't want to open the PDF? \n(Click 'OK' to open the PDF)"
+    "Are you sure you don't want to open the PDF? \nIt's a pretty good speech! \n(Click 'OK' to open the PDF)"
   );
 
   if (sureToCancel) {
     openPdf();                // They changed their mind - open the PDF
   }
 });
+}
 
 
+const yearSpan = document.querySelector("#year");
+const currentDate = new Date();
+yearSpan.textContent = currentDate.getFullYear();
 
 
 // Trial Section Dropdown Function
