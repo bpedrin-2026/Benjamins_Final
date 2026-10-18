@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Multi-User Login Page</title>
 
-    /* ---------- Contains own styling and js to keep it isolated ------------- */
+    <!--  ---------- Contains own styling and js to keep it isolated -------------     -->
 
     <style>
         body {
@@ -17,6 +17,10 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+        }
+
+        header {
+            text-align: center;
         }
 
         .login-container {
@@ -39,6 +43,7 @@
             margin: 8px 0;
             border: 1px solid #ccc;
             border-radius: 4px;
+            box-sizing: border-box;
         }
 
         button {
@@ -66,7 +71,8 @@
 <body>
 
     <header>
-        <p c>One Option Is NEVER An Option!</p>
+        <p style="color:red"><strong>There Are Many Options,<br>
+                                        But One Option Is NEVER An Option!</strong></p>
     </header>
 
     <div class="login-container">
