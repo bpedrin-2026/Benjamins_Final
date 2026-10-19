@@ -25,7 +25,9 @@ Here is where I will be holding PDFs and other non-html pages and information. P
 I have plenty of images in the images folder. I wanted to keep everything local.
 
 ### - Root index.html acts as login
-### - index1.html is the actual primary web file/main page
+Changed this to LogIn.html - moved the index from the pages folder to act as front page
+
+### - index.html is the actual primary web file/main page
 
 
 <hr>

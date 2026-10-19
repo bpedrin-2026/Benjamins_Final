@@ -2,120 +2,101 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multi-User Login Page</title>
+    <title>Software Systems Final Project</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/script.js" defer></script>
 
-    <!--  ---------- Contains own styling and js to keep it isolated -------------     -->
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        header {
-            text-align: center;
-        }
-
-        .login-container {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 300px;
-        }
-
-        h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        input[type="text"],
-        input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            margin: 8px 0;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-
-        button {
-            width: 100%;
-            padding: 10px;
-            background-color: #28a745;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #218838;
-        }
-
-        .message {
-            margin-top: 10px;
-            text-align: center;
-            font-weight: bold;
-        }
-    </style>
 </head>
 
-<body>
+<body class="site-body">
 
-    <header>
-        <p style="color:red"><strong>There Are Many Options,<br>
-                                        But One Option Is NEVER An Option!</strong></p>
+    <header class="site-header">
+        <hr><br>
+
+        <div class="logo-banner">
+            <img src="../images/Western_Cavaliers.jpg" alt="Western Cavaliers Logo">
+            <p>
+                <h1>College Portfolio - Western TC</h1>
+            </p>
+            <img class="personal-img" src="../images/Me&Computer.jpg" alt="Image of Benjamin">
+        </div><br>
+
+        <hr>
     </header>
 
-    <div class="login-container">
-        <h2>Login</h2>
-        <input type="text" id="username" placeholder="Username" autofocus>
-        <input type="password" id="password" placeholder="Password">
-        <button onclick="login()">Login</button>
-        <div class="message" id="message"></div>
+    <main class="site-main">
+
+        <p class="centered">
+
+            Welcome to my portfolio! You will find a collection of my work and projects completed during my time at
+            Western so far.<br>
+            I have also included a few snippets of my personal work and interests.<br>
+            Please feel free to explore the various sections and learn more about my skills and interests.
+            
+        <br><br><hr>
+
+        </p>
+
+        <div class="main-wrap">
+
+            <img class="Index-images" src="/images/wtcbike.jpg">
+            <img class="Index-images" src="/images/blueGlow.jpg">
+            <img class="Index-images" src="/images/Fire.jpg">
+            <img class="Index-images" src="/images/dragonfly.jpg">
+
+        </div>
+        <br><hr><br><br>
+
+            <p class="centered" id="vert-center"> 
+                Here at Western, I've been able to learn about all of the great programs and opportunities for growth that are offered. From the Mechatronics Department and the Tech Lab,<br>
+                to the Cisco Networking and Web Development Programs, Western is filled with diversity and class. As I've worked through the different classes, and researched different topics,<br> 
+                is has become clear that my life needed a change to allow me to grow and develop new aspects of myself. I hope you enjoy this small glimpse into my journey.
+            </p>
+    </main>
+
+    <!-- Flex container -->
+
+    <div>
+        <div class="flex-container">
+            <a href="../pages/pandora.html" class="flex-item">Pandora's Jar</a>
+            <a href="../pages/psychology.html" class="flex-item">Paper on Executive Dysfunction</a>
+            <a href="../pages/guardian.html" class="flex-item">Guardian</a>
+            <a href="../pages/parking.html" class="flex-item">Western Parking Program</a>
+            <a href="../pages/education.html" class="flex-item">Free Education</a>
+            <a href="../pages/math.html" class="flex-item">Math Magic</a>
+        </div>
     </div>
 
-    <script>
-        // Multiple valid username-password pairs
-        const validUsers = [
-            { username: "benjamin", password: "#Education2026!" },
-            { username: "admin", password: "password" },
-            { username: "SoftwareSystems", password: "123456789" }
-        ];
+    <!-- Trial Section for Dropdown Menu - Not currently in use, but may be used in the future
 
-        function login() {
-            const user = document.getElementById("username").value.trim();
-            const pass = document.getElementById("password").value.trim();
-            const messageDiv = document.getElementById("message");
+<div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">Choose an option</button>
+    <div id="myDropdown" class="dropdown-content">
+        <a href="pages/pandora.html">Pandora's Jar</a>
+        <a href="pages/psychology.html">Paper on Executive Dysfunction</a>
+        <a href="pages/guardian.html">Guardian</a>
+        <a href="pages/parking.html">Western Parking Program</a>
+        <a href="pages/education.html">Free Education</a>
+        <a href="pages/math.html">Math Magic</a>  
+    </div>
+</div>
+--> 
+    <footer class="site-footer">
+        <hr>
 
-            // Input validation
-            if (!user || !pass) {
-                messageDiv.style.color = "red";
-                messageDiv.textContent = "Please enter both username and password.";
-                return;
-            }
+        <div>
+            <p><a href="../pages/aboutme.html">About Me</a></p>
+        </div>
 
-            // Check credentials
-            const found = validUsers.some(u => u.username === user && u.password === pass);
+        <p class="centered">Copyright &copy; <span id="year"></span> - All Rights Reserved</p>
 
-            if (found) {
-                messageDiv.style.color = "green";
-                messageDiv.textContent = "Login successful!";
-                window.open("pages/Index1.html", "_self");
-            } else {
-                messageDiv.style.color = "red";
-                messageDiv.textContent = "Invalid username or password.";
-            }
-        }
-    </script>
+    </footer>
+
+       
 
 </body>
 
