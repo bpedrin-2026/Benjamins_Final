@@ -264,6 +264,7 @@ a {
 
 .pandora-container {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     gap: 1rem;
@@ -273,7 +274,7 @@ a {
     display: flex;
     flex-direction: column;
     flex: 0 1 35%;
-    min-width: 0;
+    min-width: min-content;
     text-align: justify;
     font-size: 1.2em;
     gap: 1rem;
@@ -283,14 +284,14 @@ a {
     display: flex;
     flex-direction: column;
     flex: 0 1 25%;
-    min-width: 0;
+    min-width: min-content;
+    background-color: #91db54;
     text-align: justify;
     font-size: 1.2em;
     gap: 1rem;
 }
 
 .shaded-box {
-    background-color: #91db54;
     padding: 5px 25px;
 }
 .column-3 {
